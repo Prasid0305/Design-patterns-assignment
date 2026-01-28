@@ -1,0 +1,61 @@
+Gowda H S, Prasid Assignment: Implementation of Factory Design Pattern for a Notification System
+Objective
+To understand and implement the Factory Design Pattern by creating a notification system that sends messages through Email, SMS, or Push Notification based on user preference or system configuration.
+Problem Statement
+In real-world applications like banking alerts, OTP systems, and e-commerce platforms, notifications are sent through different channels such as Email, SMS, or Push Notifications.
+
+The system should be designed in such a way that the notification type can be selected dynamically at runtime without modifying the existing code.
+Requirements
+Create a Notification interface with a method:
+Implement the following classes:
+EmailNotification
+SMSNotification
+PushNotification
+Each class should provide its own implementation of the sendMessage() method.
+Create a NotificationFactory class that contains a method:
+Based on the input (Email, SMS, or Push), the factory should return the appropriate notification object.
+Write a main class to:
+Accept user preference
+Use the factory to create the notification object
+Send the notification
+getNotification(String notificationType)
+sendMessage()
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Assignment 2: Implementation of Visitor Design Pattern for an Online Shopping Cart
+Objective
+To understand and implement the Visitor Design Pattern by separating operations from the objects on which they operate.
+Problem Statement
+In an online shopping system, a cart can contain different types of items such as:
+Books
+Electronics
+Groceries
+Different operations need to be performed on these items, such as:
+Calculating total price
+Applying discounts
+Generating bills
+Instead of adding these operations inside each item class, the system should use the Visitor Design Pattern to keep the design clean and extensible.
+Scenario (Real-World Use Case)
+E-commerce platforms like Amazon, Flipkart, or Shopify perform multiple operations on products (pricing, discounts, tax calculation, reporting) without frequently modifying product classes.
+Requirements
+Create an interface ItemElement with a method:
+Implement item classes:
+Book
+Electronics
+Grocery
+Create a Visitor interface with methods to visit each item type:
+Implement a concrete visitor:
+PriceCalculatorVisitor
+The visitor should calculate the price of each item based on its rules.
+Write a main class to:
+Add items to the cart
+Apply the visitor
+Display the total price
+visit(Book book)visit(Electronics electronics)visit(Grocery grocery)
+accept(Visitor visitor)
+ 
